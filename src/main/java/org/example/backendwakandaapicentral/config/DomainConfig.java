@@ -12,7 +12,7 @@ import java.time.OffsetDateTime;
 import java.util.Optional;
 
 @Configuration
-@EntityScan("org.main_java.backend_springboot_aspectos.domain")
+@EntityScan("org.example.backendwakandaapicentral.domain")
 @EnableJpaRepositories("org.example.backendwakandaapicentral.repos")
 @EnableTransactionManagement
 @EnableJpaAuditing(dateTimeProviderRef = "auditingDateTimeProvider")
