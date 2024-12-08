@@ -1,7 +1,7 @@
 services:
   mysql-wakanda-API-central:
     image: mysql:8.0
-    hostname: mysql-wakanda-api-central
+    hostname: mysql-wakanda-API-central
     environment:
       - MYSQL_DATABASE=Backend-Wakanda-API-Central
       - MYSQL_ROOT_PASSWORD=P@ssw0rd
@@ -15,10 +15,10 @@ services:
       retries: 5
       timeout: 5s
 
-  backend_wakanda_agua:
+  backend_wakanda_API_central:
     build:
       context: ./
-    container_name: backend_wakanda_api_central
+    container_name: backend_wakanda_API_central
     ports:
       - "8104:8105"
     networks:
@@ -37,7 +37,7 @@ services:
       [
         "./wait-for-it.sh", "eureka-server:8761", "-t", "60", "--",
         "./wait-for-it.sh", "mysql-wakanda-API-central:3306", "-t", "60", "--",
-        "java", "-jar", "/app/backend-wakanda-api-central.jar",
+        "java", "-jar", "/app/backend-wakanda-API-central.jar",
       ]
 
 volumes:

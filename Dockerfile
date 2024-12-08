@@ -30,4 +30,4 @@ RUN apt-get update && apt-get install -y curl && \
 EXPOSE 8085
 
 # Comando para iniciar la aplicación
-ENTRYPOINT ["./wait-for-it.sh", "mysql-wakanda-API-central:3306", "--", "java", "-jar", "/app/backend-wakanda-api-central.jar"]
+ENTRYPOINT ["./wait-for-it.sh", "mysql-wakanda-API-central:3306", "--", "java", "-jar", "/app/backend-wakanda-API-central.jar"]

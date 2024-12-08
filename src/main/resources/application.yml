@@ -22,7 +22,7 @@ spring:
           new_generator_mappings: true
 
   application:
-    name: backend_wakanda_api_central
+    name: backend_wakanda_API_central
 
 server:
   port: 8104
